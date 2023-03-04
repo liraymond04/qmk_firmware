@@ -8,6 +8,59 @@
 
 This is a keyboard firmware based on the [tmk\_keyboard firmware](https://github.com/tmk/tmk_keyboard) with some useful features for Atmel AVR and ARM controllers, and more specifically, the [OLKB product line](https://olkb.com), the [ErgoDox EZ](https://ergodox-ez.com) keyboard, and the [Clueboard product line](https://clueboard.co).
 
+## Setup
+
+Clone repository with submodules and add upstream remote
+
+```
+git clone --recurse-submodules https://github.com/liraymond04/qmk_firmware.git
+```
+```
+git remote add upstream https://github.com/qmk/qmk_firmware.git
+```
+
+Install avr-gcc 8 and the qmk package from pacman
+
+```
+sudo pacman -U https://archive.archlinux.org/packages/a/avr-gcc/avr-gcc-8.3.0-1-x86_64.pkg.tar.xz
+```
+```
+sudo pacman -S qmk
+```
+
+Run qmk doctor to check requirements
+```
+qmk setup
+```
+
+Set build environment defaults
+```
+qmk config user.keyboard=xiudi/xd84pro
+```
+```
+qmk config user.keymap=liraymond04
+```
+
+Run qmk command to compile firmware
+```
+qmk compile
+```
+
+## Flashing firmware
+
+Flashing options:
+ - Hold down both shift keys and press Pause
+ - Hold down both shift keys and press B
+ - Unplug your keyboard, hold down the Spacebar and B at the same time, plug in your keyboard and wait a second before releasing the keys
+ - Unplug your keyboard, hold down the top or bottom left key (usually Escape or Left Control) and plug in your keyboard
+ - Press the physical RESET button, usually located on the underside of the PCB
+ - Locate header pins on the PCB labeled RESET and GND, and short them together while plugging your PCB in
+
+Run qmk command to flash firmware
+```
+qmk flash
+```
+
 ## Documentation
 
 * [See the official documentation on docs.qmk.fm](https://docs.qmk.fm)

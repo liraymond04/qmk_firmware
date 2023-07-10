@@ -52,7 +52,7 @@ Flashing options:
  - Hold down both shift keys and press Pause
  - Hold down both shift keys and press B
  - Unplug your keyboard, hold down the Spacebar and B at the same time, plug in your keyboard and wait a second before releasing the keys
- - Unplug your keyboard, hold down the top or bottom left key (usually Escape or Left Control) and plug in your keyboard
+ - 》 **Unplug your keyboard, hold down the top or bottom left key (usually Escape or Left Control) and plug in your keyboard**
  - Press the physical RESET button, usually located on the underside of the PCB
  - Locate header pins on the PCB labeled RESET and GND, and short them together while plugging your PCB in
 

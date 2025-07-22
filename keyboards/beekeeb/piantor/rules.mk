@@ -1,2 +1,2 @@
-SERIAL_DRIVER = vendor
+# SERIAL_DRIVER = vendor
 KEY_LOCK_ENABLE = yes
